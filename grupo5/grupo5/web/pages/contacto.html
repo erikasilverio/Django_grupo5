@@ -6,9 +6,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="../css/contactos.css">
-    <link rel="icon" href="../img/icon/icono_ws-transformed.ico">
+    
+    <script src="https://kit.fontawesome.com/2bfac4fd93.js" crossorigin="anonymous"></script>
+
+    <script defer src="{% static '/js/nav_bar.js' %}"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static '/css/normalize.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/index.css' %}">
+    <link rel="icon" href="{% static '/img/icon/icono_ws-transformed.ico' %}">
+    
     <title>Venta de Autos</title>
 </head>
 
@@ -17,22 +27,22 @@
         <section class="container">
             <nav class="navbar">
                 <picture class="logo_container">
-                    <a href="../index.html">
-                        <img class="logo" src="../img/logo white.png" alt="Logo">
+                    <a href="index.html">
+                        <img class="logo" src="{% static 'img/logo white.png' %}" alt="Logo">
                     </a>
                 </picture>
                 <div class="navigation_content">
+                    <div class="navigation_content">
                     <ul class="nav_menu nav_menu_visible">
-                        <li class="nav_menu_item"><a href="../index.html" class="navbar_Item">Inicial</a></li>
-                        <li class="nav_menu_item"><a href="../pages/garage.html" class="navbar_Item">Garage</a></li>
-                        <li class="nav_menu_item"><a href="../pages/venta_auto.html" class="navbar_Item">Vende tu Auto</a>
-                        </li>
-                        <li class="nav_menu_item"><a href="../pages/contacto.html" class="navbar_Item">Contacto</a></li>
+                        <li class="nav_menu_item"><a href="{% url 'index' %}" class="navbar_Item">Inicial</a></li>
+                        <li class="nav_menu_item"><a href="{% url 'garage' %}" class="navbar_Item">Garage</a></li>
+                        <li class="nav_menu_item"><a href="{% url 'venta_auto' %}" class="navbar_Item">Vende tu Auto</a></li>
+                        <li class="nav_menu_item"><a href="{% url 'contacto' %}" class="navbar_Item">Contacto</a></li>
                     </ul>
                     <div class="container_user_section">
-                        <a id="login" class="user_section" href="../pages/login.html">Inicial Sesion</a>
-                        <a id="sing_up" class="user_section" href="../pages/registro_user.html">Registrarse</a>
-                        <a id="profile" class="user_section" href="../pages/perfil.html">Perfil</a>
+                        <a id="login" class="user_section" href="{% url 'login' %}">Inicial Sesion</a>
+                        <a id="sing_up" class="user_section" href="{% url 'registro_user' %}">Registrarse</a>
+                        <a id="profile" class="user_section" href="{% url 'perfil' %}">Perfil</a>
                     </div>
                 </div>
                 <button class="hamburger">
