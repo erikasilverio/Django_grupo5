@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/perfil.css' %}">
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
-    <link href="static https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="{% static 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap' %} " rel="stylesheet">
     <link rel="icon" href="{% static 'img/icon/icono_ws-transformed.ico' %}">
 
     <title>Perfil</title>
@@ -20,8 +20,8 @@
         <section class="container">
             <nav class="navbar">
                 <picture class="logo_container">
-                    <a href="../index.html">
-                        <img class="logo" src="../img/logo white.png" alt="Logo">
+                    <a href="{% url 'perfil' %}">
+                        <img class="logo" src="{% static 'img/logo white.png' %}" alt="Logo">
                     </a>
                 </picture>
                 <div class="navigation_content">
@@ -50,7 +50,7 @@
     <main class="container">
         <div class="left">
           <picture>
-            <img class="foto_usuario" src="{$ ../img/foto_perfil.jpeg %}" alt="foto_del_usuario">
+            <img class="foto_usuario" src="{$ static 'img/foto_perfil.jpeg' %}" alt="foto_del_usuario">
           </picture>
         </div>
         <div class="right">
@@ -66,7 +66,7 @@
               <p><b>Clave: </b>*******</p>              
               <p><b>Telefono: </b>11-5754-9876</p>
               <br>
-              <a class="actualizar_datos" href="{% ../pages/registro_user.html }"><i class="fa-solid fa-gear fa-spin"></i> Cambiar datos  </a>
+              <a class="actualizar_datos" href="{% url 'registro_user' %}"><i class="fa-solid fa-gear fa-spin"></i> Cambiar datos  </a>
             </div>
           </section>
           
@@ -89,7 +89,7 @@
             </div>
             <div class="car_cards_container">
                 <article class="card">
-                    <img class="img_at" src="../img/auto6.jpeg" alt="auto nuevo 1" />
+                    <img class="img_at" src="{% static '/img/auto6.jpeg' %} " alt="auto nuevo 1" />
                     <div class="card_info">
                         <h5 class="card_title">FORD</h5>
                         <div class="details">
@@ -100,7 +100,7 @@
                 </article>
                 
                 <article class="card">
-                    <img class="img_at" src="../img/auto5.jpeg" alt="auto nuevo 3" />
+                    <img class="img_at" src="{% static '/img/auto5.jpeg' %}" alt="auto nuevo 3" />
                     <div class="card_info">
                         <h5 class="card_title">JEEP</h5>
                         <div class="details">
@@ -110,7 +110,7 @@
                     </div>
                 </article>
                 <article class="card">
-                    <img class="img_at" src="../img/auto4.jpeg" alt="auto nuevo 1" />
+                    <img class="img_at" src="{% static '/img/auto4.jpeg' %}" alt="auto nuevo 1" />
                     <div class="card_info">
                         <h5 class="card_title">BMW</h5>
                         <div class="details">
@@ -132,8 +132,8 @@
 <footer class="footer_page">
     <section class="container">
         <section class="footer_section">
-            <a class="logo_container" href="../index.html">
-                <img class="logo" src="../img/logo white.png" alt="Logo">
+            <a class="logo_container" href="{% url 'perfil' %}">
+                <img class="logo" src="{$ static 'img/logo white.png' %}" alt="Logo">
             </a>
             <ul class="fotter_column">
                 <span class="footer_column_title">¿NECESITA AYUDA?</span>
@@ -173,7 +173,7 @@
   </footer>
 
     <script src="https://kit.fontawesome.com/2bfac4fd93.js" crossorigin="anonymous"></script>
-    <script defer src="../js/nav_bar.js"></script>
+    <script defer src="{% static '/js/nav_bar.js' %} "></script>
 </body>
 
 </html>

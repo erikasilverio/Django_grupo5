@@ -1,11 +1,23 @@
 from django.shortcuts import render, redirect
 
+from django.views import generic
+
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+
 
 def index(request):
     return render(request, 'index.html')
 
 def login(request):
     return render(request, 'login.html')
+
+class Home(LoginRequiredMixin, generic.TemplateView):
+    template_name = 'libreria/index.html'
+    login_url = 'pages:login'
+
+
+
 
 def perfil(request):
     return render(request,'perfil.html')
