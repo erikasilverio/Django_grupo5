@@ -85,7 +85,7 @@
 <footer class="footer_page">
     <section class="container">
         <section class="footer_section">
-            <a class="logo_container" href="../index.html">
+            <a class="logo_container" href="{% url 'index' %}">
                 <img class="logo" src="{% static 'img/logo white.png' %} " alt="Logo">
             </a>
             <ul class="fotter_column">
@@ -126,6 +126,8 @@
 </footer>
 
 <script src="https://kit.fontawesome.com/2bfac4fd93.js" crossorigin="anonymous"></script>
-<script src="../js/nav_bar.js"></script>
+
+<script src="{% static '/js/nav_bar.js' %}"></script>
+
 </body>
 </html>
