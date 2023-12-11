@@ -37,7 +37,9 @@
                     <div class="container_user_section">
                         <a id="login" class="user_section" href="{% url 'login' %}">Inicial Sesion</a>
                         <a id="sing_up" class="user_section" href="{% url 'registro_user' %}">Registrarse</a>
-                        <a id="profile" class="user_section" href="{% url 'perfil' %}">Perfil</a>
+                        <!--- <a id="profile" class="user_section" href="{% url 'perfil' %}">Perfil</a> --->
+                        <a id="profile" class="user_section" href="{% url 'login' %}">Login</a>
+                        <!--- <a id="profile" class="user_section" href="{% url 'logout' %}">Logout</a>--->
                     </div>
             </div>
             <button class="hamburger">
@@ -51,28 +53,28 @@
 </header>
 
 
+
 <!---ACA ESTA EL BOX PARA HACER EL LOGIN -->
 
-    <div class="login_container">
-        <form class="login_form" method="POST" >
-
+<div class="login_container">
+    <form class="login_form" method="POST">
         {% csrf_token %}
+        <h2>Iniciar Sesión</h2>
+        <div class="input_container">
+            <input type="text" id="idusername" name="username" required maxlength="70" />
+            <label for="idusername">Usuario</label>
+        </div>
 
-            <h2>Iniciar Sesión</h2>
-            <div class="input_container">
-                <input type="text" name="user_name" id="idusername" name="username" required="" maxlength="70" />
-                <label>Usuario</label>
-            </div>
+        <div class="input_container">
+            <input type="password" id="id_password" name="password" required maxlength="" />
+            <label for="id_password">Contraseña</label>
+        </div>
 
-            <div class="input_container">
-                <input type="password" name="password" id="id_password" name="password" required="" maxlength="" />
-                <label>Contraseña</label>
-            </div>
+        <button type="submit">Entrar</button>
 
-            
-            <a href="{% url 'perfil' %}">Entrar</a>
-        </form>
-    </div>
+        
+    </form>
+</div>
     
 
 

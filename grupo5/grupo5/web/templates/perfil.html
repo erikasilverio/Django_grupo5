@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/perfil.css' %}">
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
-    <link href="{% static 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap' %} " rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/index.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap " rel="stylesheet">
     <link rel="icon" href="{% static 'img/icon/icono_ws-transformed.ico' %}">
 
     <title>Perfil</title>
@@ -31,11 +32,13 @@
                         <li class="nav_menu_item"><a href="{% url 'garage' %}" class="navbar_Item">Garage</a></li>
                         <li class="nav_menu_item"><a href="{% url 'venta_auto' %}" class="navbar_Item">Vende tu Auto</a></li>
                         <li class="nav_menu_item"><a href="{% url 'contacto' %}" class="navbar_Item">Contacto</a></li>
+                        
                     </ul>
                     <div class="container_user_section">
-                        <a id="login" class="user_section" href="{% url 'login' %}">Inicial Sesion</a>
-                        <a id="sing_up" class="user_section" href="{% url 'registro_user' %}">Registrarse</a>
+                        <!--- <a id="login" class="user_section" href="{% url 'login' %}">Inicial Sesion</a>--->
+                        <!--- <a id="sing_up" class="user_section" href="{% url 'registro_user' %}">Registrarse</a> --->
                         <a id="profile" class="user_section" href="{% url 'perfil' %}">Perfil</a>
+                        <a id="logout" class="user_section" href="{% url 'index' %}">Logout</a>
                     </div>
                 </div>
                 <button class="hamburger">
@@ -51,7 +54,7 @@
     <main class="container">
         <div class="left">
           <picture>
-            <img class="foto_usuario" src="{$ static 'img/foto_perfil.jpeg' %}" alt="foto_del_usuario">
+            <img class="foto_usuario" src="{% static 'img/foto_perfil.jpeg' %}" alt="foto_del_usuario">
           </picture>
         </div>
         <div class="right">
@@ -68,6 +71,8 @@
               <p><b>Telefono: </b>11-5754-9876</p>
               <br>
               <a class="actualizar_datos" href="{% url 'registro_user' %}"><i class="fa-solid fa-gear fa-spin"></i> Cambiar datos  </a>
+
+              
             </div>
           </section>
           
@@ -134,7 +139,7 @@
     <section class="container">
         <section class="footer_section">
             <a class="logo_container" href="{% url 'perfil' %}">
-                <img class="logo" src="{$ static 'img/logo white.png' %}" alt="Logo">
+                <img class="logo" src="{% static 'img/logo white.png' %}" alt="Logo">
             </a>
             <ul class="fotter_column">
                 <span class="footer_column_title">¿NECESITA AYUDA?</span>
