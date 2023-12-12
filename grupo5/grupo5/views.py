@@ -4,7 +4,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
-
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
@@ -17,8 +16,7 @@ class Home(LoginRequiredMixin, View):
     def get(self, request):
         return render(request, self.template_name)
 
-# def login(request):
-   #  return render(request, 'login.html')
+
 
 def registro_user(request):
     return render(request, 'registro_user.html')
@@ -40,12 +38,13 @@ def contacto(request):
 
 
 
-#=============
+#logout =============
 
 def custom_logout(request):
     logout(request)
     return redirect('/index')
 
+#logout =============
 
 
 def custom_login(request):
