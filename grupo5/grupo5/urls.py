@@ -25,7 +25,7 @@ urlpatterns = [
     path('garage/', garage, name='garage'),
     path('venta_auto/', venta_auto, name='venta_auto'),
     path('contacto/', contacto, name='contacto'),   
-    # login
+    # login y logout
     path('login/', auth_views.LoginView.as_view(), name='login'),
     path('logout/', views.custom_logout, name='logout'),
 ]
