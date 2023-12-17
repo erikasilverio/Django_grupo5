@@ -27,7 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-STATICFILES_DIRS=['C:/Users/Erika/Documents/GRUPO_5/grupo5/grupo5/web/static']
+# STATICFILES_DIRS=['C:/Users/Erika/Documents/GRUPO_5/grupo5/grupo5/web/static']
+STATICFILES_DIRS = [BASE_DIR / 'web' / 'static']
+
 
 
 # Application definition
