@@ -27,8 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-# STATICFILES_DIRS=['C:/Users/Erika/Documents/GRUPO_5/grupo5/grupo5/web/static']
-STATICFILES_DIRS = [BASE_DIR / 'web' / 'static']
+STATICFILES_DIRS=['C:/Users/Erika/Documents/GRUPO_5/grupo5/grupo5/web/static']
+#STATICFILES_DIRS = [BASE_DIR / 'web' / 'static']
 
 
 
@@ -63,8 +63,8 @@ ROOT_URLCONF = 'grupo5.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'web' / 'templates'],
-         
+        'DIRS': ['C:/Users/Erika/Documents/GRUPO_5/grupo5/grupo5/web/templates'],
+        #  
         
         'APP_DIRS': True,
         'OPTIONS': {
